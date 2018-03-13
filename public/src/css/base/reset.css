@@ -110,3 +110,4 @@ button, select {cursor:pointer; border-radius:0;
 /*  html5 ============================================  */
 header, nav, article, section, footer, aside, main, figure, figcaption, picture{
   display:block; color:inherit;}
+  i{font-style: normal;}
