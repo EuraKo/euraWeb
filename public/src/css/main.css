@@ -1,35 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
 * { box-sizing: border-box; margin: 0; }
 
-html, body { background: white; height: 100%; overflow: hidden; font-family: 'Montserrat', helvetica, arial, sans-serif; }
+html, body { background: #fff; height: 100%; overflow: hidden; font-family: 'Montserrat', helvetica, arial, sans-serif; }
 
 .container { position: relative; display: block; width: 100vmin; height: 100%; margin: auto; z-index: 100; }
 
-.container .carousel { position: absolute; background: black; transform: translateY(100%); will-change: transform; width: 100%; height: 100%; z-index: 10; }
+.container .carousel { position: absolute; background: #000; transform: translateY(100%); will-change: transform; width: 100%; height: 100%; z-index: 10; }
 
-.container .carousel .info_back { position: absolute; top: 0; width: 100%; height: 13vh; z-index: 30; background-position: center 2%; background-size: cover; background-image: url("https://i.kinja-img.com/gawker-media/image/upload/s--gBFsZfZv--/c_scale,fl_progressive,q_80,w_800/18mozgxwgu2ibjpg.jpg"); text-align: center; }
+.container .carousel .info_back { position: absolute; top: 0; width: 100%; height: 13vh; z-index: 30; background-position: center 2%; background-size: cover; text-align: center; }
 
-.container .carousel .info_back h1 { text-align: center; color: white; margin-top: 1vh; font-weight: 300; font-size: 3vh; text-transform: uppercase; letter-spacing: 15px; opacity: 0; }
+.container .carousel .info_back h1 { text-align: center; color: #fff; margin-top: 1vh; font-weight: 300; font-size: 3vh; text-transform: uppercase; letter-spacing: 15px; opacity: 0; }
 
 .container .carousel .info_back h1 .letter { display: inline-block; line-height: 1em; opacity: 0; }
 
-.container .carousel .info_back:after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: linear-gradient(transparent, black); opacity: 1; }
+.container .carousel .info_back:after { content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-image: linear-gradient(transparent, #000); opacity: 1; }
 
 .container .carousel .active { display: block !important; }
 
-.container .carousel .citem { display: none; background: white; width: 100%; height: 100%; text-align: justify; transition: all 0.4s; }
+.container .carousel .citem { display: none; background: #fff; width: 100%; height: auto; text-align: justify; transition: all 0.4s; }
 
-.container .carousel .citem h1 { color: black; font-weight: 400; margin-top: 15vh; padding: 2vmin 7vmin; display: block; width: 100%; background: #eee; }
+.container .carousel .citem h1 { color: #000; font-weight: 400; margin-top: 15vh; padding: 2vmin 7vmin; display: block; width: 100%; background: #eee; text-transform: uppercase; }
 
-.container .carousel .citem p { color: #777; font-size: 15px; padding: 20px 7vmin; }
+.container .carousel .citem h1 .citem_btn { display: inline-block; float: right; }
 
-.container .carousel .citem p span { color: #555; font-size: 19px; display: block; padding: 15px 0; }
+.container .carousel .citem h1 .citem_btn button { background-color: inherit; font-size: 32px; font-size: 2rem; }
 
-.container .carousel .citem ul { color: #777; padding: 0 12vmin; }
+.container .carousel .citem .mokup .mokup_img { background-image: url(); background-repeat: no-repeat; }
 
-.container .menu { position: fixed; width: 100%; height: 100%; z-index: 10; background: white; display: none; }
+.container .carousel .citem .mokup .mokup_com { width: 100vmin; height: 50vmin; background-image: url("../img/Mockup.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; }
 
-.container .menu .close { position: absolute; display: flex; align-items: center; justify-content: center; top: 0; right: 0; width: 50px; height: 50px; background: rgba(0, 0, 0, 0.15); cursor: pointer; }
+.container .carousel .citem .process_btn { width: 100%; height: auto; padding: 3vmin 20vmin; }
+
+.container .carousel .citem .process_btn a { width: 14vw; height: 60px; box-shadow: 1px 1px 5px #aaa; text-align: center; line-height: 60px; text-transform: uppercase; }
+
+.container .carousel .citem .process_btn a:hover { border: 1px solid #aaa; }
+
+.container .carousel .citem .process_btn a:first-child { float: left; }
+
+.container .carousel .citem .process_btn a:last-child { float: right; }
+
+.container .menu { position: fixed; width: 100%; height: 100%; z-index: 10; background: #fff; display: none; }
+
+.container .menu .logo_img { position: fixed; width: 30vmin; height: 30vmin; top: 50%; left: 50%; margin-top: -15vmin; margin-left: -15vmin; background-image: url("../img/my_logo_bk.svg"); background-repeat: no-repeat; background-size: cover; }
+
+.container .menu .close { position: absolute; display: flex; align-items: center; justify-content: center; top: 50%; left: 50%; width: 50px; height: 50px; margin-top: -25px; margin-left: -25px; box-shadow: 1px 1px 5px #aaa; cursor: pointer; }
 
 .container .fixed_banner { position: absolute; width: 100%; z-index: 5; }
 
@@ -45,11 +59,11 @@ html, body { background: white; height: 100%; overflow: hidden; font-family: 'Mo
 
 .container .content .helmet img { position: absolute; width: 58vmin; margin: auto; top: 12vmin; bottom: 0vmin; left: 0; right: 0; user-drag: none; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none; }
 
-.container .content .helmet .planet_position { position: absolute; width: 37vmin; height: 37vmin; background: black; box-shadow: 0 10px 20px 10px black; border-radius: 50%; margin: auto; top: 0; bottom: 12vmin; left: 0; right: 0; z-index: 1; overflow: hidden; }
+.container .content .helmet .planet_position { position: absolute; width: 37vmin; height: 37vmin; background: #000; box-shadow: 0 10px 20px 10px black; border-radius: 50%; margin: auto; top: 0; bottom: 12vmin; left: 0; right: 0; z-index: 1; overflow: hidden; }
 
-.container .content .helmet .planet_position .planet_shadow { position: absolute; width: 100%; height: 100%; box-shadow: inset 0 -1.5vmax 3vmax 1.2vmax black; border-radius: 50%; z-index: 3; }
+.container .content .helmet .planet_position .planet_shadow { position: absolute; width: 100%; height: 100%; box-shadow: inset 0 -1.5vmax 3vmax 1.2vmax black; border-radius: 50%; z-index: 10; }
 
-.container .content .helmet .planet_position .planet_photo { position: absolute; width: 100%; height: 100%; background: url("https://i.kinja-img.com/gawker-media/image/upload/s--gBFsZfZv--/c_scale,fl_progressive,q_80,w_800/18mozgxwgu2ibjpg.jpg"); background-repeat: no-repeat; background-position: center -75%; background-size: 150%; z-index: 1; will-change: background; }
+.container .content .helmet .planet_position .planet_photo { position: absolute; width: 100%; height: 100%; background: url("../img/my_logo.svg"); background-repeat: no-repeat; background-position: center; background-size: 80%; z-index: 1; will-change: background; }
 
 .container .bottom { position: absolute; bottom: 0; width: 100%; height: 28vh; }
 
@@ -87,7 +101,7 @@ html, body { background: white; height: 100%; overflow: hidden; font-family: 'Mo
 
 .container .bottom .orbit .planet_container .saturn { background: #8A8975; right: 12vmin; bottom: 12vmin; }
 
-.container .bottom .orbit .planet_container .saturn .ring { position: absolute; width: 100%; height: 100%; box-shadow: 0 0 0 5px white, 0 0 0 8px rgba(0, 0, 0, 0.5), 0 0 0 12px #d6d6c2; border-radius: 50%; }
+.container .bottom .orbit .planet_container .saturn .ring { position: absolute; width: 100%; height: 100%; box-shadow: 0 0 0 5px #fff, 0 0 0 8px rgba(0, 0, 0, 0.5), 0 0 0 12px #d6d6c2; border-radius: 50%; }
 
 .container .bottom .orbit .planet_container .uranus { background: #C4EAED; right: 0; left: 0; margin: auto; bottom: -2.5vmin; }
 
@@ -109,7 +123,15 @@ html, body { background: white; height: 100%; overflow: hidden; font-family: 'Mo
 
 .moon { width: 100%; height: 100%; animation: planet_rotation 2s infinite linear; }
 
-.moon span { width: 0.8vmin; height: 0.8vmin; background: black; border-radius: 50%; position: absolute; }
+.moon span { width: 0.8vmin; height: 0.8vmin; background: #000; border-radius: 50%; position: absolute; }
+
+#resumeBox { width: 100%; height: 100%; background-image: url("../img/resume.png"); background-repeat: no-repeat; background-position: center; background-size: contain; }
+
+.del { padding: 30px 60px; float: right; }
+
+.del a { display: block; width: 60px; height: 60px; background-color: #fff; text-align: center; line-height: 60px; box-shadow: 1px 1px 1px 1px #aaa; }
+
+.del a:hover { border: 1px solid #aaa; }
 
 @keyframes planet_rotation { from { transform: rotate(0deg); }
   to { transform: rotate(360deg); } }
